@@ -61,4 +61,24 @@ class InboxPolicy < ApplicationPolicy
   def sync_templates?
     @account_user.administrator?
   end
+
+  def health?
+    @account_user.administrator?
+  end
+
+  def reset_secret?
+    @account_user.administrator?
+  end
+
+  def enable_whatsapp_calling?
+    @account_user.administrator?
+  end
+
+  def disable_whatsapp_calling?
+    @account_user.administrator?
+  end
+
+  def set_inbound_calls?
+    @account_user.administrator?
+  end
 end
